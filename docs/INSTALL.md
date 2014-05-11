@@ -116,6 +116,10 @@ node start.js
 
 Try to connect by going to http://YOURADDRESS.COM:8080  (If you're using the SSL config then try  http://YOURADDRESS.COM:8085. OR https://YOURADDRESS.COM:8086) If it loads, then you should be ready to use Coinpunk!
 
+## A note about self-signed SSL
+
+Some iOS devices are okay with doing AJAX over SSL with a self-signed certificate, while others aren't. The iPhone 4S in particular seems to have trouble with it. For more information, see issue #69.
+
 ## Backing up Database
 
 Redis maintains a file called `/var/lib/redis/dump.rdb`, which is a backup of your Redis database. It is safe to copy this file while Redis is running. **It is strongly recommended that you backup this file frequently.** You can also setup a Redis slave to listen to master in real time. Ideally you should do both!
